@@ -32,7 +32,7 @@ function sort(valor) {
         numeros.push(aleatorio);
     }
     carlos.update();
-    setTimeout(()=>{insertionSort(numeros)}, 60000)
+    setTimeout(()=>{insertionSort(numeros)}, 3000)
 }
 
 
