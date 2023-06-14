@@ -26,24 +26,13 @@ const carlos = new Chart(ctx, {
 
 function sort(valor) {
     numeros.length = 0
-    let j = 0;
-    let aleatorio = 0;
-    while (j < valor) {
-        aleatorio = Math.floor(Math.random() * valor);
-
-
-        for (let i = 0; i < numeros.length; i++) {
-            if (aleatorio == numeros[i]) {
-                aleatorio = Math.floor(Math.random() * valor);
-            }
-        }
+    for(j=0; j < valor; j++) {
+        let aleatorio = Math.floor(Math.random() * valor);
 
         numeros.push(aleatorio);
-        j++;
-
     }
     carlos.update();
-    setTimeout(()=>{insertionSort(numeros)}, 2000)
+    setTimeout(()=>{insertionSort(numeros)}, 60000)
 }
 
 
